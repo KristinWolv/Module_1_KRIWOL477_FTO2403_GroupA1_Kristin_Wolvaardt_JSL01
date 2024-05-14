@@ -1,5 +1,5 @@
 function validateSyntax() {
-    let input = document.getElementById('petInput').value;
+    let petInput = document.getElementById('petInput').value;
     //These variables indicates whether the prefix, birthyear and name are valid
     //Initialized as 'false'
     let petPrefixValid = false;
@@ -31,10 +31,10 @@ function validateSyntax() {
 
     //checks if the input field is empty. If yes it sets 'result' to inticate error
     //Checks if all validation are 'true' , if yes, sets 'result' to indicate valid syntax or invalid syntax
-    if (petInput === " || petInput == null") {
+    if (petInput === "" || petInput == null) {
         result = "Error: Input Field Empty";
     }
-    else if (petPrefixValid && petBirthValid && petNameValid) {
+    else if (petPrefixValid && petBirthYearValid && petNameValid) {
         result = "Valid Syntax";
     }
     else {
